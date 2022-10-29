@@ -130,7 +130,7 @@ span.text-red {
 
 .hero-banner-container {
   padding: 100px 40px;
-  background-color: #dcdcdc;
+  background-color: #6a7184;
   border-radius: 15px;
   position: relative;
   height: 500px;
@@ -143,8 +143,8 @@ span.text-red {
 .hero-banner-container button {
   border-radius: 15px;
   padding: 10px 16px;
-  background-color: #f02d34;
-  color: white;
+  background-color: #ffffff;
+  color: #364673;
   border: none;
   margin-top: 40px;
   font-size: 18px;
@@ -159,7 +159,7 @@ span.text-red {
 }
 .hero-banner-container h1 {
   color: white;
-  font-size: 10em;
+  font-size: 7em;
   margin-left: -20px;
   text-transform: uppercase;
 }
@@ -179,10 +179,10 @@ span.text-red {
   line-height: 1.3;
   display: flex;
   flex-direction: column;
-  color: #324d67;
+  color: #ffffff;
 }
 .desc p {
-  color: #5f5f5f;
+  color: #ffffff;
   font-weight: 100;
   text-align: end;
 }
@@ -208,7 +208,7 @@ span.text-red {
 }
 .footer-banner-container {
   padding: 100px 40px;
-  background-color: #f02d34;
+  background-color: #33426b;
   border-radius: 15px;
   position: relative;
   height: 400px;
@@ -225,7 +225,7 @@ span.text-red {
   border-radius: 15px;
   padding: 10px 16px;
   background-color: white;
-  color: red;
+  color: #2f384f;
   border: none;
   margin-top: 40px;
   font-size: 18px;
@@ -422,7 +422,7 @@ span.text-red {
   transition: 0.3s ease-in-out;
 }
 .product-detail-image:hover {
-  background-color: #f02d34;
+  background-color: #dde6b9;
 }
 .small-images-container {
   display: flex;
@@ -438,7 +438,7 @@ span.text-red {
 }
 
 .selected-image {
-  background-color: #f02d34;
+  background-color: #7a8997;
 }
 .reviews {
   color: #f02d34;
@@ -462,7 +462,7 @@ span.text-red {
   font-weight: 700;
   font-size: 26px;
   margin-top: 30px;
-  color: #f02d34;
+  color: #6a7184;
 }
 .price .old-price,
 .product-price .old-price,
@@ -482,12 +482,12 @@ span.text-red {
 }
 .buttons .add-to-cart {
   padding: 10px 20px;
-  border: 1px solid #f02d34;
+  border: 1px solid #6a7184;
   margin-top: 40px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   background-color: white;
-  color: #f02d34;
+  color: #6a7184;
   cursor: pointer;
   width: 200px;
   transform: scale(1, 1);
@@ -500,11 +500,11 @@ span.text-red {
   width: 200px;
 
   padding: 10px 20px;
-  background-color: #f02d34;
+  background-color: #6a7184;
   color: white;
   border: none;
   margin-top: 40px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   cursor: pointer;
   transform: scale(1, 1);
