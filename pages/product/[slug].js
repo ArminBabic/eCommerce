@@ -28,7 +28,8 @@ const ProductDetails = ({ product, products }) => {
             {image?.map((item, i) => {
               return (
                 <img
-                  src={urlFor(item)}
+                  key={i}
+                  src={urlFor(item || "Loading")}
                   className={
                     i === index ? "small-image selected-image" : "small-image"
                   }
@@ -74,7 +75,7 @@ const ProductDetails = ({ product, products }) => {
             >
               Dodaj u korpu
             </button>
-            <button type="button" className="buy-now" onClick="">
+            <button type="button" className="buy-now" /* onClick="" */>
               Kupi sada
             </button>
           </div>
