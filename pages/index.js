@@ -2,22 +2,53 @@ import React from "react";
 import HeroBanner from "../components/HeroBanner";
 import Product from "../components/Product";
 import FooterBanner from "../components/FooterBanner";
+import Hero from "../components/Hero";
+import Image from "next/image";
+import bg from "../assets/bg-black.png";
+import union from "../assets/union.png";
 
 import { client } from "../lib/client";
+import PerfectSound from "../components/PerfectSound";
+import BateryLife from "../components/BateryLife";
 
 const Home = ({ products, bannerData }) => {
   return (
     <>
-      <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
+      <div>
+        <div className="absolute top-0 right-0 -z-10  w-[31.5rem] overflow-hidden h-[719px]">
+          <Image
+            alt="bg-image"
+            src={bg}
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            placeholder="blur"
+            priority
+          />
+          <Image
+            alt="bg-image"
+            src={union}
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            placeholder="blur"
+            priority
+          />
+        </div>
+      </div>
+      {/* <HeroBanner heroBanner={bannerData.length && bannerData[0]} /> */}
+      <Hero />
       <div className="products-heading">
-        <h2>Najbolji proizvodi za vas</h2>
-        <p>Sva tehnologija na jednom mjestu</p>
+        <h2>Best products for you</h2>
+        <p className="font-semibold text-lg">All tech in one place</p>
       </div>
       <div className="products-container">
         {products?.map((product) => {
           return <Product key={product._id} product={product} />;
         })}
       </div>
+      <PerfectSound />
+      <BateryLife />
       <FooterBanner footerBanner={bannerData && bannerData[0]} />
     </>
   );

@@ -22,7 +22,7 @@ const FooterBanner = ({
         <div className="left">
           <p>
             {discount}
-            {""} popusta
+            {""} discount
           </p>
           <h3>{largeText1}!</h3>
           <h3>{largeText2}</h3>
@@ -31,9 +31,11 @@ const FooterBanner = ({
         <div className="right">
           <p>{smallText}</p>
           <h3>{midText}</h3>
-          <p>{desc}</p>
-          <Link href={`/product/${product}`}>
-            <button type="button">{buttonText}</button>
+          <p className="mb-12">{desc}</p>
+          <Link href={`/product/headphones_2`}>
+            <butoon className="  font-semibold text-white bg-black border-black border-2 rounded-2xl px-16 py-3 uppercase hover:text-black hover:bg-white ease-in duration-300 cursor-pointer">
+              {buttonText}
+            </butoon>
           </Link>
         </div>
         <img src={urlFor(image)} className="footer-banner-image" />
