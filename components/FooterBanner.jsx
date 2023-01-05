@@ -17,8 +17,8 @@ const FooterBanner = ({
   },
 }) => {
   return (
-    <footer className="footer-banner-container">
-      <div className="banner-desc">
+    <footer className="footer-banner-container xl:flex xl:justify-center xl:mx-auto">
+      <div className="banner-desc flex flex-col lg:flex-row  gap-96 max-w-[1400px]">
         <div className="left">
           <p>
             {discount}
@@ -30,10 +30,11 @@ const FooterBanner = ({
         </div>
         <div className="right">
           <p>{smallText}</p>
-          <h3>{midText}</h3>
-          <p className="mb-12">{desc}</p>
+          <p className="">{desc}</p>
+          <h3 className="mb-10">{midText}</h3>
+
           <Link href={`/product/headphones_2`}>
-            <butoon className="  font-semibold text-white bg-black border-black border-2 rounded-2xl px-16 py-3 uppercase hover:text-black hover:bg-white ease-in duration-300 cursor-pointer">
+            <butoon className="  font-semibold text-white bg-black border-black border-2 rounded-2xl px-8 sm:px-16 py-3 uppercase hover:text-black hover:bg-white ease-in duration-300 cursor-pointer">
               {buttonText}
             </butoon>
           </Link>

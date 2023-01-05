@@ -12,10 +12,12 @@ import PerfectSound from "../components/PerfectSound";
 import BateryLife from "../components/BateryLife";
 
 const Home = ({ products, bannerData }) => {
+  const featuredProducts = products.slice(0, 7);
+
   return (
     <>
       <div>
-        <div className="absolute top-0 right-0 -z-10  w-[31.5rem] overflow-hidden h-[719px]">
+        <div className="hidden lg:block absolute top-0 right-0 -z-10  lg:w-[31.5rem] overflow-hidden h-[719px]">
           <Image
             alt="bg-image"
             src={bg}
@@ -29,7 +31,7 @@ const Home = ({ products, bannerData }) => {
             alt="bg-image"
             src={union}
             layout="fill"
-            objectFit="cover"
+            objectFit="content"
             quality={100}
             placeholder="blur"
             priority
@@ -38,12 +40,12 @@ const Home = ({ products, bannerData }) => {
       </div>
       {/* <HeroBanner heroBanner={bannerData.length && bannerData[0]} /> */}
       <Hero />
-      <div className="products-heading">
+      <div className="products-heading pt-24 xs:pt-4 lg:pt-32">
         <h2>Best products for you</h2>
         <p className="font-semibold text-lg">All tech in one place</p>
       </div>
       <div className="products-container">
-        {products?.map((product) => {
+        {featuredProducts?.map((product) => {
           return <Product key={product._id} product={product} />;
         })}
       </div>
