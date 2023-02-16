@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { urlFor, client } from "../../lib/client";
+
 import {
   AiOutlineMinus,
   AiOutlinePlus,
@@ -16,8 +17,8 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <div>
-      <div className="product-detail-container">
-        <div>
+      <div className="flex flex-col items-center mx-auto sm:flex-row sm:items-start gap-4  py-32 px-4 md:px-10 lg:px-24">
+        <div className="flex flex-col ">
           <div className="image-container">
             <img
               src={urlFor(image && image[index])}
@@ -39,24 +40,23 @@ const ProductDetails = ({ product, products }) => {
             })}
           </div>
         </div>
-        <div className="product-detail-desc">
+        <div className="max-w-[270px] sm:max-w-[300px] w-full flex flex-col gap-3">
           <h1>{name}</h1>
-          <div className="reviews">
-            <div>
+          <div className="flex items-center">
+            <div className="flex text-orange-500">
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
               <AiOutlineStar />
             </div>
-            <p>(17)</p>
           </div>
           <h4>Detalji:</h4>
           <p>{details}</p>
           <p className="price">${price}</p>
           <div className="quantity">
             <h3>Kolicina:</h3>
-            <p className="quantity-desc">
+            <p className="quantity-desc flex items-center">
               <span className="minus" onClick={decreaseQty}>
                 <AiOutlineMinus />
               </span>
@@ -67,7 +67,7 @@ const ProductDetails = ({ product, products }) => {
             </p>
           </div>
 
-          <div className="buttons">
+          <div className="buttons flex items-center gap-2">
             <button
               type="button"
               className="add-to-cart"
@@ -75,7 +75,10 @@ const ProductDetails = ({ product, products }) => {
             >
               Dodaj u korpu
             </button>
-            <button type="button" className="buy-now" /* onClick="" */>
+            <button
+              type="button"
+              className="buy-now hidden sm:block" /* onClick="" */
+            >
               Kupi sada
             </button>
           </div>

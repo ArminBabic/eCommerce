@@ -4,7 +4,7 @@ import headphones from "../assets/hero-headphones.png";
 import Link from "next/link";
 const Hero = () => {
   return (
-    <section className="relative w-full h-[40rem] xs:h-[50rem] md:h-[38rem] px-4 lg:px-24 flex  ">
+    <section className="relative w-full h-[40rem] xs:h-[50rem] md:h-[38rem] px-4 md:px-6 lg:px-24 flex  ">
       <div className="w-full flex flex-col-reverse md:flex-row justify-between items-center md:gap-8 lg:gap-12 xl:gap-[1rem] pt-32 ">
         {/* left side */}
         <div className="flex flex-col gap-6 sm:gap-12 sm:mt-10">
@@ -22,7 +22,7 @@ const Hero = () => {
           </div>
         </div>
         {/* right side */}
-        <div className="relative w-56 h-72 xs:w-[330px] xs:h-[410px] lg:w-[25rem] lg:h-[31.5rem] ">
+        <div className="relative w-56 h-72 xs:w-[330px] xs:h-[410px] lg:w-[25rem] lg:h-[31.5rem]  xl:right-40 ">
           <Image
             src={headphones}
             alt="hero-headphones"

@@ -14,9 +14,6 @@ body,
 body {
   background-color: #fff;
 }
-::-webkit-scrollbar {
-  width: 0px;
-}
 
 a {
   color: inherit;
@@ -414,10 +411,8 @@ span.text-red {
   transform: scale(1.1, 1.1);
 }
 .product-detail-container {
-  display: flex;
   gap: 40px;
-  margin: 40px;
-  margin-top: 60px;
+
   color: #324d67;
 }
 
@@ -444,6 +439,46 @@ span.text-red {
   width: 70px;
   height: 70px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .product-detail-image {
+    border-radius: 15px;
+    background-color: #ebebeb;
+
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+}
+@media screen and (max-width: 768px) {
+  .quantity-desc .num {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    font-size: 10px;
+  }
+  .quantity-desc span {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+  .product-detail-image {
+    border-radius: 15px;
+    background-color: #ebebeb;
+
+    width: 270px;
+    height: 270px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+  .small-image {
+    border-radius: 8px;
+    background-color: #ebebeb;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
 }
 
 .selected-image {
@@ -487,7 +522,7 @@ span.text-red {
 }
 .product-detail-desc .buttons {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 .buttons .add-to-cart {
   padding: 10px 20px;
@@ -532,10 +567,10 @@ span.text-red {
   cursor: pointer;
 }
 .quantity-desc .minus {
-  border-right: 1px solid gray;
   color: #f02d34;
 }
 .quantity-desc .num {
+  border-left: 1px solid gray;
   border-right: 1px solid gray;
   font-size: 20px;
 }
@@ -703,9 +738,6 @@ span.text-red {
   }
   .buttons .buy-now {
     width: 150px;
-  }
-  .product-detail-container {
-    margin: 20px;
   }
 
   .item-desc .flex {
