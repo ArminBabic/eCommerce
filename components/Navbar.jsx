@@ -54,14 +54,14 @@ const Navbar = () => {
               <Link href="/">Home</Link>
             </li>
             <li className="cursor-pointer hover:underline">
-              <Link href="/">About</Link>
+              <Link href="/coming-soon">About</Link>
             </li>
             <li className="cursor-pointer hover:underline">
-              <Link href="/product">Products</Link>
+              <Link href="/coming-soon">Products</Link>
             </li>
 
             <li className="cursor-pointer hover:underline">
-              <Link href="/">Contact Us</Link>
+              <Link href="/coming-soon">Contact Us</Link>
             </li>
           </ul>
         </div>
@@ -102,20 +102,20 @@ const Navbar = () => {
             onClick={navHandler}
             className="font-openSans text-base xs:text-xl font-bold  sm:text-lg xs:p-1 sm:p-4 tracking-[1px]  hover:underline"
           >
-            <Link href="/">About</Link>
+            <Link href="/coming-soon">About</Link>
           </li>
           <li
             onClick={navHandler}
             className="font-openSans text-base xs:text-xl font-bold  sm:text-lg xs:p-1 sm:p-4 tracking-[1px]  hover:underline"
           >
-            <Link href="/product">Products</Link>
+            <Link href="/coming-soon">Products</Link>
           </li>
 
           <li
             onClick={navHandler}
             className="font-openSans text-base xs:text-xl font-bold  sm:text-lg xs:p-1 sm:p-4 tracking-[1px]  hover:underline"
           >
-            <Link href="/">Contact Us</Link>
+            <Link href="/coming-soon">Contact Us</Link>
           </li>
         </ul>
         <div className="flex pr-4" onClick={navHandler}>

@@ -56,7 +56,7 @@ const ProductDetails = ({ product, products }) => {
           <p className="price">${price}</p>
           <div className="quantity">
             <h3>Kolicina:</h3>
-            <p className="quantity-desc flex items-center">
+            <p className="quantity-desc flex items-center max-w-[130px] max-h-[50px]">
               <span className="minus" onClick={decreaseQty}>
                 <AiOutlineMinus />
               </span>
@@ -70,7 +70,7 @@ const ProductDetails = ({ product, products }) => {
           <div className="buttons flex items-center gap-2">
             <button
               type="button"
-              className="add-to-cart"
+              className="add-to-cart "
               onClick={() => onAdd(product, qty)}
             >
               Dodaj u korpu
