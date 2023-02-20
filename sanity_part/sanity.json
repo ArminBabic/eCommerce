@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "grey-gnat"
-  },
   "api": {
     "projectId": "ri8vz80w",
     "dataset": "production"
+  },
+  "project": {
+    "name": "grey-gnat"
   },
   "plugins": [
     "@sanity/base",
