@@ -3,23 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 const CoomingSoon = () => {
   return (
-    <>
-      <Head>
-        <title>Armin Babic</title>
-
-        <meta
-          name="description"
-          content="Turn designs into reality , logos, UI/UX, apps &
-websites, social media, magazines & banners."
-        />
-        <link rel="icon" href="/a.png" />
-
-        <meta
-          content="website,websites,web developer,developer,developers,coding,code,programming,java script,web services,react,next.js,development,services,privacy police,cookies,cookie."
-          name="keywords"
-        ></meta>
-      </Head>
-
+    <div>
       <main>
         <div>
           <div className="w-full h-[630px]">
@@ -42,7 +26,7 @@ websites, social media, magazines & banners."
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 };
 

@@ -128,9 +128,9 @@ span.text-red {
   font-weight: 500;
 }
 .product-price {
-  font-weight: 800;
+  font-weight: 600;
   margin-top: 6px;
-  color: black;
+  color: rgb(16, 13, 13);
 }
 
 .hero-banner-container {
