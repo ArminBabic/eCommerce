@@ -14,7 +14,7 @@ const Hero = () => {
           </h2>
           <div className="flex gap-4 sm:gap-10 items-center w-full ">
             <p className="font-bold text-xl xs:text-3xl">229.99 $</p>{" "}
-            <Link href={`/product`}>
+            <Link href={`/products`}>
               <butoon className="font-semibold text-white bg-black border-black border-2 rounded-2xl px-8 xs:px-16 py-3 uppercase hover:text-black hover:bg-white ease-in duration-300 cursor-pointer">
                 Buy Now
               </butoon>

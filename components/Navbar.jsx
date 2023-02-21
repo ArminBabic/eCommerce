@@ -57,7 +57,7 @@ const Navbar = () => {
               <Link href="/coming-soon">About</Link>
             </li>
             <li className="cursor-pointer hover:underline">
-              <Link href="/product">Products</Link>
+              <Link href="/products">Products</Link>
             </li>
 
             <li className="cursor-pointer hover:underline">
@@ -108,7 +108,7 @@ const Navbar = () => {
             onClick={navHandler}
             className="font-openSans text-base xs:text-xl font-bold  sm:text-lg xs:p-1 sm:p-4 tracking-[1px]  hover:underline"
           >
-            <Link href="/product">Products</Link>
+            <Link href="/products">Products</Link>
           </li>
 
           <li

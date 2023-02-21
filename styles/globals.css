@@ -52,7 +52,7 @@ a {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 15s linear infinite;
+  animation: marquee 25s linear infinite;
   width: 180%;
 }
 .track:hover {
@@ -766,7 +766,7 @@ span.text-red {
     font-size: 20px;
   }
   .track {
-    animation: marquee 10s linear infinite;
+    animation: marquee 20s linear infinite;
     width: 550%;
   }
   .success-wrapper,

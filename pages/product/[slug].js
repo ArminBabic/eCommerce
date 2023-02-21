@@ -15,6 +15,8 @@ const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
   const { increaseQty, decreaseQty, qty, onAdd } = useStateContext();
 
+  const slicedProducts = products.slice(0, 12);
+
   return (
     <div>
       <div className="flex flex-col items-center mx-auto sm:flex-row sm:items-start gap-4  py-32 px-4 md:px-10 lg:px-24">
@@ -89,7 +91,7 @@ const ProductDetails = ({ product, products }) => {
         <h2>Preporuka za vas</h2>
         <div className="marquee">
           <div className="maylike-products-container track">
-            {products.map((item, i) => {
+            {slicedProducts.map((item, i) => {
               return <Product key={i} product={item} />;
             })}
           </div>

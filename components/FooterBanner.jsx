@@ -33,7 +33,7 @@ const FooterBanner = ({
           <p className="">{desc}</p>
           <h3 className="mb-10">{midText}</h3>
 
-          <Link href={`/product`}>
+          <Link href={`/products`}>
             <butoon className="  font-semibold text-white bg-black border-black border-2 rounded-2xl px-8 sm:px-16 py-3 uppercase hover:text-black hover:bg-white ease-in duration-300 cursor-pointer">
               {buttonText}
             </butoon>

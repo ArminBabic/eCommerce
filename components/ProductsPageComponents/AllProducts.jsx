@@ -1,10 +1,11 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import Product from "../Product";
-const AllProducts = ({ products, onChangeHandler }) => {
+
+const AllProducts = ({ products }) => {
   const [categoryState, setCategoryState] = useState("all");
   const categoryHandler = (data) => {
     setCategoryState(data);
-    onChangeHandler(data);
   };
 
   return (
@@ -13,45 +14,20 @@ const AllProducts = ({ products, onChangeHandler }) => {
         <div className="px-6 md:ml-8 flex flex-col gap-1">
           <h3 className="font-semibold text-lg">Products</h3>
           <ul className="flex flex-col gap-1 font-md">
-            <li
-              onClick={() => {
-                categoryHandler("all");
-              }}
-              className="cursor-pointer hover:translate-x-[2px] hover:italic ease-in duration-300"
-            >
-              All{" "}
+            <li className="cursor-pointer hover:translate-x-[2px] hover:italic ease-in duration-300">
+              <Link href={"/products"}>All</Link>
             </li>
-            <li
-              onClick={() => {
-                categoryHandler("headphones");
-              }}
-              className="cursor-pointer hover:translate-x-[2px] hover:italic ease-in duration-300"
-            >
-              Headphones
+            <li className="cursor-pointer hover:translate-x-[2px] hover:italic ease-in duration-300">
+              <Link href={"/products/headphones"}>Headphones</Link>
             </li>
-            <li
-              onClick={() => {
-                categoryHandler("notebook");
-              }}
-              className="cursor-pointer hover:translate-x-[2px] hover:italic ease-in duration-300"
-            >
-              Notebook
+            <li className="cursor-pointer hover:translate-x-[2px] hover:italic ease-in duration-300">
+              <Link href={"/products/notebook"}>Notebook</Link>
             </li>
-            <li
-              onClick={() => {
-                categoryHandler("smartwatch");
-              }}
-              className="cursor-pointer hover:translate-x-[2px] hover:italic ease-in duration-300"
-            >
-              Smartwatch
+            <li className="cursor-pointer hover:translate-x-[2px] hover:italic ease-in duration-300">
+              <Link href={"/products/smartwatch"}>Smartwatch</Link>
             </li>
-            <li
-              onClick={() => {
-                categoryHandler("others");
-              }}
-              className="cursor-pointer hover:translate-x-[2px] hover:italic ease-in duration-300"
-            >
-              Others
+            <li className="cursor-pointer hover:translate-x-[2px] hover:italic ease-in duration-300">
+              <Link href={"/products/speaker"}>Speaker</Link>
             </li>
           </ul>
         </div>
