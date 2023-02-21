@@ -78,9 +78,9 @@ const Navbar = () => {
         </div>
         <div className="lg:hidden mr-4 " onClick={navHandler}>
           {!nav ? (
-            <GiHamburgerMenu className="w-8 h-8 lg:text-white" />
+            <GiHamburgerMenu className="w-8 h-8 lg:text-white cursor-pointer" />
           ) : (
-            <AiOutlineClose className="w-8 h-8 text-black relative z-[111111]" />
+            <AiOutlineClose className="w-8 h-8 text-black relative z-[111111] cursor-pointer" />
           )}
         </div>
       </main>
