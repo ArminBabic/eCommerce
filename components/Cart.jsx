@@ -24,7 +24,7 @@ const Cart = () => {
   } = useStateContext();
 
   return (
-    <div className="cart-wrapper" ref={cartRef}>
+    <div className="cart-wrapper relative z-30" ref={cartRef}>
       <div className="cart-container">
         <button
           type="button"

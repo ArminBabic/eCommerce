@@ -36,15 +36,21 @@ const Navbar = () => {
     <nav
       className={
         !scrollNav
-          ? "w-screen h-[80px] z-10 bg-transparent fixed drop-shadow-lg px-4 lg:px-24 "
-          : "w-screen h-[80px] z-10 bg-white fixed drop-shadow-lg px-4 lg:px-24"
+          ? "w-screen h-[80px] z-10 bg-transparent fixed drop-shadow-lg px-2 xs:px-4 lg:px-24 "
+          : "w-screen h-[80px] z-10 bg-white fixed drop-shadow-lg px-2 xs:px-4 lg:px-24"
       }
     >
       <main className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center gap-16">
           <div className="logo">
             <Link href="/">
-              <div className="text-3xl text-black font-bold italic cursor-pointer">
+              <div
+                className={
+                  !scrollNav
+                    ? "text-3xl text-white lg:text-[#191919] font-bold italic cursor-pointer"
+                    : "text-3xl text-black lg:text-[#191919] font-bold italic cursor-pointer"
+                }
+              >
                 iTech
               </div>
             </Link>
@@ -53,15 +59,16 @@ const Navbar = () => {
             <li className="cursor-pointer hover:underline ">
               <Link href="/">Home</Link>
             </li>
+
             <li className="cursor-pointer hover:underline">
-              <Link href="/coming-soon">About</Link>
+              <Link href={"/products/headphones"}>Headphones</Link>
             </li>
             <li className="cursor-pointer hover:underline">
-              <Link href="/products">Products</Link>
+              <Link href={"/products/speaker"}>Speakers</Link>
             </li>
 
             <li className="cursor-pointer hover:underline">
-              <Link href="/coming-soon">Contact Us</Link>
+              <Link href="/contact">Support</Link>
             </li>
           </ul>
         </div>
@@ -78,17 +85,23 @@ const Navbar = () => {
         </div>
         <div className="lg:hidden mr-4 " onClick={navHandler}>
           {!nav ? (
-            <GiHamburgerMenu className="w-8 h-8 lg:text-white cursor-pointer" />
+            <GiHamburgerMenu
+              className={
+                !scrollNav
+                  ? "w-8 h-8 text-white lg:text-white cursor-pointer"
+                  : "w-8 h-8 text-[#191919] lg:text-white cursor-pointer"
+              }
+            />
           ) : (
-            <AiOutlineClose className="w-8 h-8 text-black relative z-[111111] cursor-pointer" />
+            <AiOutlineClose className="w-8 h-8 text-[#191919] relative z-[111111] cursor-pointer" />
           )}
         </div>
       </main>
       <div
         className={
           nav
-            ? "lg:hidden absolute top-0 left-0 space-y-6 p-6 flex flex-col  items-center w-full text-black h-screen bg-white ease-in-out duration-500 z-[80] "
-            : "lg:hidden absolute top-0 left-[-100%] p-6 flex flex-col  items-center w-full text-black h-screen bg-white ease-in-out duration-500 z-[80]"
+            ? "lg:hidden absolute top-0 left-0 space-y-6 p-6 flex flex-col  items-center w-full text-[#191919] h-screen bg-white ease-in-out duration-500 z-[80] "
+            : "lg:hidden absolute top-0 left-[-100%] p-6 flex flex-col  items-center w-full text-[#191919] h-screen bg-white ease-in-out duration-500 z-[80]"
         }
       >
         <ul className="pt-20 text-center space-y-6 md:space-y-4 text-gray-600">
@@ -98,24 +111,25 @@ const Navbar = () => {
           >
             <Link href="/">Home</Link>
           </li>
+
           <li
             onClick={navHandler}
             className="font-openSans text-base xs:text-xl font-bold  sm:text-lg xs:p-1 sm:p-4 tracking-[1px]  hover:underline"
           >
-            <Link href="/coming-soon">About</Link>
+            <Link href={"/products/headphones"}>Headphones</Link>
           </li>
           <li
             onClick={navHandler}
             className="font-openSans text-base xs:text-xl font-bold  sm:text-lg xs:p-1 sm:p-4 tracking-[1px]  hover:underline"
           >
-            <Link href="/products">Products</Link>
+            <Link href={"/products/speaker"}>Speakers</Link>
           </li>
 
           <li
             onClick={navHandler}
             className="font-openSans text-base xs:text-xl font-bold  sm:text-lg xs:p-1 sm:p-4 tracking-[1px]  hover:underline"
           >
-            <Link href="/coming-soon">Contact Us</Link>
+            <Link href="/contact">Support</Link>
           </li>
         </ul>
         <div className="flex pr-4" onClick={navHandler}>

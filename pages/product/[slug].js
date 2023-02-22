@@ -19,7 +19,7 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <div>
-      <div className="flex flex-col items-center mx-auto sm:flex-row sm:items-start gap-4  py-32 px-4 md:px-10 lg:px-24">
+      <div className="flex flex-col items-start mx-auto sm:flex-row sm:items-start gap-4  py-32 px-4 md:px-10 lg:px-24">
         <div className="flex flex-col ">
           <div className="image-container">
             <img
@@ -53,11 +53,11 @@ const ProductDetails = ({ product, products }) => {
               <AiOutlineStar />
             </div>
           </div>
-          <h4>Detalji:</h4>
+          <h4>Details:</h4>
           <p>{details}</p>
           <p className="price">${price}</p>
           <div className="quantity">
-            <h3>Kolicina:</h3>
+            <h3>Value:</h3>
             <p className="quantity-desc flex items-center max-w-[130px] max-h-[50px]">
               <span className="minus" onClick={decreaseQty}>
                 <AiOutlineMinus />
@@ -75,22 +75,22 @@ const ProductDetails = ({ product, products }) => {
               className="add-to-cart "
               onClick={() => onAdd(product, qty)}
             >
-              Dodaj u korpu
+              Add to cart
             </button>
             <button
               type="button"
               className="buy-now hidden sm:block" /* onClick="" */
             >
-              Kupi sada
+              Buy Now
             </button>
           </div>
         </div>
       </div>
 
       <div className="maylike-products-wrapper">
-        <h2>Preporuka za vas</h2>
+        <h2 className="text-lg sm:text-3xl">Related Products</h2>
         <div className="marquee">
-          <div className="maylike-products-container track">
+          <div className="maylike-products-container track ">
             {slicedProducts.map((item, i) => {
               return <Product key={i} product={item} />;
             })}

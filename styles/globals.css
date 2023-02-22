@@ -130,7 +130,7 @@ span.text-red {
 .product-price {
   font-weight: 600;
   margin-top: 6px;
-  color: rgb(16, 13, 13);
+  color: #191919;
 }
 
 .hero-banner-container {
@@ -268,7 +268,7 @@ span.text-red {
 }
 .cart-wrapper {
   width: 100vw;
-  background: rgba(0, 0, 0, 0.5);
+  background: #191919;
   position: fixed;
   right: 0;
   top: 0;
@@ -286,7 +286,7 @@ span.text-red {
 }
 
 .footer-container {
-  background-color: #000;
+  background-color: #191919;
   color: #fff;
   text-align: center;
   margin-top: 100px;
@@ -756,7 +756,7 @@ span.text-red {
   }
   .flex h4 {
     font-size: 16px;
-    color: black;
+    color: #191919;
   }
   .cart-bottom {
     padding: 30px;
