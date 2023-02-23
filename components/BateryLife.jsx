@@ -7,10 +7,10 @@ const BateryLife = () => {
       <div className="relative px-4 lg:px-24 flex flex-col justify-center md:flex-row items-center ">
         {/* left side */}
         <div className="flex flex-col gap-6 items-center md:items-start justify-center w-full max-w-[560px]">
-          <h2 className="font-bold text-3xl lg:text-5xl text-center md:text-start w-full">
-            Up to 20 hours <br /> battery life
+          <h2 className="font-bold text-[16px] xs:text-2xl lg:text-4xl  text-center md:text-start  w-full">
+            Up to 20 hours <br className="hidden lg:block" /> battery life
           </h2>
-          <p className="max-w-[300px] md:max-w-[450px] text-sm sm:text-base text-center md:text-start w-full">
+          <p className="max-w-[380px] sm:max-w-[430px] md:max-w-[450px] text-[12px] sm:text-base  w-full">
             Enjoy up to 20 hours of listening, enough time to pore through this
             entire playlist. So you can keep the music — or the quiet — going
             all day long. And when it finally runs down, a quick 15-minute

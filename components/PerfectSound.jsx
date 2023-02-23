@@ -19,10 +19,10 @@ const PerfectSound = () => {
         </div>
         {/* rightside */}
         <div className="flex flex-col items-center md:items-start gap-6 justify-center w-full max-w-[560px]">
-          <h2 className="font-bold text-3xl lg:text-5xl text-center md:text-start w-full">
-            Perfect sound <br /> immersive world
+          <h2 className="font-bold text-[16px] xs:text-2xl lg:text-4xl  text-center md:text-start  w-full">
+            Perfect sound <br className="hidden lg:block" /> immersive world
           </h2>
-          <p className="max-w-[300px] md:max-w-[450px] text-sm sm:text-base text-center md:text-start w-full">
+          <p className="max-w-[380px] sm:max-w-[430px] md:max-w-[450px] text-[12px] sm:text-base  w-full">
             QuietComfort 35 wireless headphones II are engineered with renowned
             noise cancellation. With the Google Assistant and Amazon Alexa
             built-in, you have instant access to millions of songs, playlists

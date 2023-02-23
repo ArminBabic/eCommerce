@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 
 import { useStateContext } from "../Context/StateContext";
 import { urlFor } from "../lib/client";
+import Image from "next/image";
 
 const Cart = () => {
   const cartRef = useRef();
@@ -32,39 +33,39 @@ const Cart = () => {
           onClick={() => setShowCart(false)}
         >
           <AiOutlineLeft />
-          <span className="heading">Tvoja korpa</span>
-          <span className="cart-num-items">({totalQuantities} proizvoda )</span>
+          <span className="heading">Your Cart</span>
+          <span className="cart-num-items">({totalQuantities} products )</span>
         </button>
 
         {cartItems.length < 1 && (
           <div className="empty-cart">
             <AiOutlineShoppingCart size={200} />
-            <h3>Tvoja shoping korpa je pazna.</h3>
+            <h3>Your cart is empty.</h3>
             <Link href="/products">
               <button
                 type="button"
                 onClick={() => setShowCart(false)}
                 className="btn"
               >
-                Nastavi kupovinu
+                Continue Shoping
               </button>
             </Link>
           </div>
         )}
 
         <div className="product-container">
-          {cartItems.length >= 1 &&
-            cartItems.map((item) => {
+          {cartItems?.length >= 1 &&
+            cartItems?.map((item, index) => {
               return (
-                <div className="product" key={item._id}>
+                <div className="product" key={item?._id}>
                   <img
-                    src={urlFor(item?.image[0])}
+                    src={urlFor(item?.image[0]) || "loading..."}
                     className="cart-product-image"
                   />
                   <div className="item-desc">
                     <div className="flex top">
-                      <h5>{item.name}</h5>
-                      <h4>${item.price}</h4>
+                      <h5>{item?.name}</h5>
+                      <h4>${item?.price}</h4>
                     </div>
                     <div className="flex bottom">
                       <div>
@@ -72,16 +73,16 @@ const Cart = () => {
                           <span
                             className="minus"
                             onClick={() => {
-                              toggleCartItemQuantity(item._id, "dec");
+                              toggleCartItemQuantity(item?._id, "dec");
                             }}
                           >
                             <AiOutlineMinus />
                           </span>
-                          <span className="num">{item.quantity}</span>
+                          <span className="num">{item?.quantity}</span>
                           <span
                             className="plus"
                             onClick={() => {
-                              toggleCartItemQuantity(item._id, "inc");
+                              toggleCartItemQuantity(item?._id, "inc");
                             }}
                           >
                             <AiOutlinePlus />
@@ -105,12 +106,12 @@ const Cart = () => {
         {cartItems.length >= 1 && (
           <div className="cart-bottom">
             <div className="total">
-              <h3>Ukupno:</h3>
+              <h3>Total:</h3>
               <h3>${totalPrice}</h3>
             </div>
             <div className="btn-container">
               <button type="button" className="btn">
-                Kupi sa Stripe
+                Buy with Stripe
               </button>
             </div>
           </div>
